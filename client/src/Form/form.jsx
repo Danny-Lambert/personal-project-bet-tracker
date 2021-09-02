@@ -70,7 +70,7 @@ import axios from 'axios'
         this.setState({ other_info_needed: e.target.value })
     }
     onChangeWhatAreTheOdds(e) {
-        this.setState({ what_are_the_odds: e.target.value })
+        this.setState({ what_are_the_odds: e.target.valueAsNumber })
     }
     onChangeOutcomeOfBet(e) {
         this.setState({ outcome_of_bet: e.target.value })
@@ -120,7 +120,7 @@ import axios from 'axios'
             what_are_the_odds: this.state.what_are_the_odds,
             outcome_of_bet: this.state.outcome_of_bet,
         };
-
+            // NEED TO CHANGE THIS ENDPOINT
         axios.post('http://localhost:3000/api/week1', userObject)
             .then((res) => {
                 console.log(res.data)
@@ -225,7 +225,7 @@ render() {
                     </div>
                     <div className="form-group editableFormGroup">
                         <label className ="form-labels oddsLabel">Odds</label>
-                        <input type="number" value={this.state.what_are_the_odds} onChange={this.onChangeWhatAreTheOdds} className="form-answer-box" required />
+                        <input type="number" step="1" value={this.state.what_are_the_odds} onChange={this.onChangeWhatAreTheOdds} className="form-answer-box" required />
                     </div>
                     <div className="form-group ">
                         <label className ="form-labels">Bet Outcome</label>

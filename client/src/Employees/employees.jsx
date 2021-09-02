@@ -1,8 +1,10 @@
 import React, {useState, useEffect, Component} from 'react'
 // import '../employees/employees.styles.css'
+import ChartsEmbedSDK from '@mongodb-js/charts-embed-dom';
 import axios from 'axios'
 import Form from "../Form/form";
 import CurrentWeekBetslip from "../CurrentWeekBetslip/currentWeekBetslip";
+import Iframe from 'react-iframe';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../Employees/employees.styles.css'
@@ -28,6 +30,8 @@ function Employees(db){
             console.log(err)
         })
     })
+ 
+
         // const [posts, setPosts] = useState([])
     
     // useEffect(() => {
@@ -49,13 +53,18 @@ function Employees(db){
     // console.log(dannyLength)
     // var cursor = db.collection('bets').find({});
     // db.collection.find( { who_is_it: "Danny",   outcome_of_bet: "Won" } ).count();
-    return(
+
+
+    
+
+
+return(
     <div className= "full-page-main-page">
         <div className="form-and-table-container">
             <Form />
         <div className="container">
             <div class="row">
-            <table class="table-of-leaderboard table table-dark table-striped table-dark shadow col-8">
+            {/* <table class="table-of-leaderboard table table-dark table-striped table-dark shadow col-8">
                         <thead>
                         <tr className="tableRows">
                             <th scope="col"></th>
@@ -89,8 +98,12 @@ function Employees(db){
                         </tr>
                         </tbody>
                     </table>
-                    </div>
-                    <div class="row">
+                */}
+{/* <Iframe iframe = {iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-yabzy/embed/charts?id=0939b01d-2239-4be9-9248-1dabbf88dcb2&theme=light"}/>
+                </div> */}
+            <iframe class= "iframe-chart" src="https://charts.mongodb.com/charts-project-0-yabzy/embed/charts?id=0939b01d-2239-4be9-9248-1dabbf88dcb2&theme=light"/>            
+            </div>        
+            <div class="row">
             <CurrentWeekBetslip />
             </div>
             </div>

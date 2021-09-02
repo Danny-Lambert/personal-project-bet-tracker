@@ -13,7 +13,7 @@ app.use(cors({credentials: true, origin: "*"}));
 
 //Need to hide these credentials of username and password 
 
-
+let URI = "mongodb+srv://danny:Danny12345@group-betting.n04jv.mongodb.net/bets?retryWrites=true&w=majority"
 
 
 MongoClient.connect(URI, {useUnifiedTopology: true, useNewUrlParser: true})
@@ -36,6 +36,8 @@ MongoClient.connect(URI, {useUnifiedTopology: true, useNewUrlParser: true})
     const atlasRouter2 = createRouter(atlasCollection2);
     app.use('/api/week1', atlasRouter2);
 
+  // ADD in per collection
+  
     // const atlasRouter3 = createRouter(atlasCollection3);
     // app.use('/api/candidates', atlasRouter3);
 
