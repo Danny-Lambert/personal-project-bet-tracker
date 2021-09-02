@@ -1,0 +1,107 @@
+const mongoose = require('mongoose');
+
+// connect to the mongodb atlas cluster
+const database = require('./src/database')
+
+
+const AssignmentModel = require('./models/assignment')
+const CandidateModel = require('./models/candidate')
+const ClientModel = require('./models/client')
+const CommentModel = require('./models/comment')
+const EmployeeModel = require('./models/employee')
+const ProjectModel = require('./models/project')
+const UserModel = require('./models/user')
+
+const db_name = "wfm-app-data"
+
+
+async function main() {
+
+    //await createEmployee("Matthew Gallagher", "Temp",10,"Glasgow","Undergraduate developer",1,1,4,"none","API Testing","","my_cv.txt");        
+    //await findEmployeeByName("Matthew Gallagher");
+    //await updateEmployeeByName("Matthew Gallagher", { employment_type:"Perm" } );
+    //await deleteEmployeeByName("Matthew Gallagher");
+    
+
+}
+
+main().catch(console.error);
+
+
+async function createEmployee(name,employment_type,pay_rate, location,job_title,api_testing,selenium,cypress,security_clearence,skill_asp,client_asp,cv){
+    let newEmp = new EmployeeModel({
+
+        name: name,
+        employment_type: employment_type,
+        pay_rate: pay_rate,
+        location: location,
+        job_title: job_title,
+        api_testing: api_testing,
+        selenium: selenium,
+        cypress: cypress,
+        security_clearence: security_clearence,
+        skill_asp: skill_asp,
+        client_asp: client_asp,
+        cv: cv
+    
+    })
+    
+    newEmp.save()
+        .then(doc => {
+            console.log(doc)
+        })
+        .catch( err => {
+            console.error(err)
+        })
+};
+
+//
+// Searching etc. by name should be swapped to something unique like ID
+//
+
+async function findEmployeeByName(name) {
+    EmployeeModel
+    .find({
+      name: name   // search query
+    })
+    .then(doc => {
+      console.log(doc)
+    })
+    .catch(err => {
+      console.error(err)
+    })
+}
+
+async function updateEmployeeByName( employeeName, updates) {
+    EmployeeModel
+    .findOneAndUpdate(
+      {
+        name: employeeName  // search query
+      }, 
+      updates,
+      {
+        new: true,                       // return updated doc
+        runValidators: true              // validate before update
+      })
+    .then(doc => {
+      console.log(doc)
+    })
+    .catch(err => {
+      console.error(err)
+    })
+}
+
+
+
+async function deleteEmployeeByName( employeeName ) {
+    EmployeeModel
+  .findOneAndRemove({
+    name: employeeName
+  })
+  .then(response => {
+    console.log(response)
+  })
+  .catch(err => {
+    console.error(err)
+  })
+}

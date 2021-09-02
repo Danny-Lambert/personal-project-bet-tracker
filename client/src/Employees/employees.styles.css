@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+.form-and-table-container{
+    /* border: 10px solid rgb(16, 53, 53); */
+    display: flex;
+    /* align-items: flex-end; */
+    margin-left: 5%;
+
+}
+.full-page-main-page{
+    /* background-color: #747272; */
+    background-color: rgb(51, 51, 51);
+
+    /* margin-top: 50%; */
+    font-family: 'Work Sans', sans-serif;}
+.table-of-leaderboard{
+    width: 60%;
+    height: 5%;
+    margin: 5%;
+}
+.tableRows{
+    height: 20%;
+}
+.fixtureAlign{
+    display: flex;
+    align-items: baseline;
+    justify-content: center
+}
+.vsPeeTag{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.nameAndDateBox{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-top:5%;
+}
+.employee-text-h2{
+    margin-right: 25px;
+}
+.otherInfoAndBetBox{
+    display: flex;
+    align-items: baseline;
+    justify-content: center
+}
+.otherInfoAndBetBoxPeeTag{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.tBoxPeeTag{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.oddsAndOutcomeBox{
+    display: flex;
+    align-items: baseline;
+    justify-content: center
+}
+.employee-card-text-outcome{
+    margin-left: 3%;
+}
+.employee-card-text-odds{
+    margin-right: 5%;
+}
+
+.employees-list{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+
+.single-bet-card{
+    width:200px;
+    height:160px ;
+    border-radius: 5%;
+    border: solid 3px var(--business-blue);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgrey;
+
+    background-color: #546E7A;
+
+    margin-top:5%;
+    margin-right:5%;
+}
+.bet-text-h2{
+    margin-top: 5%;
+   
+}
+h3{
+    font-size: 15px;
+}
+p{
+    font-size: 13px;
+}
+li{
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
