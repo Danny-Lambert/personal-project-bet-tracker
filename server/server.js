@@ -23,11 +23,7 @@ MongoClient.connect(URI, {useUnifiedTopology: true, useNewUrlParser: true})
 
     //  your atlas collection name below
     const atlasCollection = db.collection('bets');
-    // const atlasCollection3 = db.collection('candidates');
-    // const atlasCollection4 = db.collection('clients');
-    // const atlasCollection5 = db.collection('comments');
-    // const atlasCollection6 = db.collection('projects');
-    
+     
     const atlasRouter = createRouter(atlasCollection);
     app.use('/api/bets', atlasRouter);
 
@@ -36,19 +32,6 @@ MongoClient.connect(URI, {useUnifiedTopology: true, useNewUrlParser: true})
     const atlasRouter2 = createRouter(atlasCollection2);
     app.use('/api/week1', atlasRouter2);
 
-  // ADD in per collection
-  
-    // const atlasRouter3 = createRouter(atlasCollection3);
-    // app.use('/api/candidates', atlasRouter3);
-
-    // const atlasRouter4 = createRouter(atlasCollection4);
-    // app.use('/api/clients', atlasRouter4);
-
-    // const atlasRouter5 = createRouter(atlasCollection5);
-    // app.use('/api/comments', atlasRouter5);
-
-    // const atlasRouter6 = createRouter(atlasCollection6);
-    // app.use('/api/projects', atlasRouter6);
 
   })
   .catch(console.err);
