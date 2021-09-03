@@ -8,6 +8,9 @@ import Iframe from 'react-iframe';
 import r2rlogo from '../images/R2Rlogo.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../Employees/employees.styles.css'
+import Week1 from "../Week1/week1.jsx"
+import Week2 from "../Week2/week2.jsx"
+import Week3 from "../Week3/week3.jsx"
 
 
 // THIS SECTION CAN BE DELETED ONCE PEOPLEHR FULLY INTEGRATED 
@@ -77,36 +80,39 @@ return(
         
         <div className="container ">
             <div class="card_container">
-            <ul className = "employees-list">
-                {   
-                    posts.map(post => <li key={post.id}>
-                        <div class ="card_content">
-                        <div className ="single-bet-card">
-                            <div className="nameAndDateBox">   
-                                <p className = "bet-card-text"><h3 className ="bet-text-h2">{post.who_is_it}</h3></p>
-                                <p className = "bet-card-text"><span className = "bet-text-data">{post.betting_weekend_selector}</span></p>
-                            </div> 
-                            <div className = "fixtureAlign">
-                                <p className = "bet-card-text"><span className = "bet-text-data"> {post.home_team}</span></p>
-                                <p className="vsPeeTag">vs</p>
-                                <p className = "bet-card-text"><span className = "bet-text-data"> {post.away_team}</span></p>
-                            </div>
-                            <div className = "otherInfoAndBetBox">
-                                <p className = "bet-card-text"><span className = "bet-text-data">{post.what_is_the_bet}</span></p>
-                                <p className ="otherInfoAndBe   tBoxPeeTag">-</p>
-                                <p className = "bet-card-text"><span className = "bet-text-data">{post.other_info_needed}</span></p>
-                            </div>
-                            <div className = "oddsAndOutcomeBox">
-                                <p className = "bet-card-text employee-card-text-odds">Odds:  <span className = "bet-text-data">{post.what_are_the_odds}</span></p>
-                                <p className = "bet-card-text"><span className = "bet-text-data">{post.outcome_of_bet}</span></p>
-                            </div>
-                        </div>
-                </div>
-                        </li>)
-                }
-            </ul>
+                <Week3 />
+                <Week2 />
+                <Week1 />
             </div>
         </div>         
+        {/* <ul className = "employees-list">
+            {   
+                posts.map(post => <li key={post.id}>
+                    <div class ="card_content">
+                    <div className ="single-bet-card">
+                        <div className="nameAndDateBox">   
+                            <p className = "bet-card-text"><h3 className ="bet-text-h2">{post.who_is_it}</h3></p>
+                            <p className = "bet-card-text"><span className = "bet-text-data">{post.betting_weekend_selector}</span></p>
+                        </div> 
+                        <div className = "fixtureAlign">
+                            <p className = "bet-card-text"><span className = "bet-text-data"> {post.home_team}</span></p>
+                            <p className="vsPeeTag">vs</p>
+                            <p className = "bet-card-text"><span className = "bet-text-data"> {post.away_team}</span></p>
+                        </div>
+                        <div className = "otherInfoAndBetBox">
+                            <p className = "bet-card-text"><span className = "bet-text-data">{post.what_is_the_bet}</span></p>
+                            <p className ="otherInfoAndBe   tBoxPeeTag">-</p>
+                            <p className = "bet-card-text"><span className = "bet-text-data">{post.other_info_needed}</span></p>
+                        </div>
+                        <div className = "oddsAndOutcomeBox">
+                            <p className = "bet-card-text employee-card-text-odds">Odds:  <span className = "bet-text-data">{post.what_are_the_odds}</span></p>
+                            <p className = "bet-card-text"><span className = "bet-text-data">{post.outcome_of_bet}</span></p>
+                        </div>
+                    </div>
+            </div>
+                    </li>)
+            }
+        </ul> */}
     </div>
     )
 }

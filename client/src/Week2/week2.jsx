@@ -2,7 +2,7 @@ import React, {useState, useEffect, Component} from 'react'
 // import '../employees/employees.styles.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../CurrentWeekBetslip/currentWeekBetslip.css'
+import '../Week2/week2.css'
 
 
 // THIS SECTION CAN BE DELETED ONCE PEOPLEHR FULLY INTEGRATED 
@@ -10,12 +10,12 @@ import '../CurrentWeekBetslip/currentWeekBetslip.css'
 // CAN USE AS EXAMPLE CALLS TO MONGODB FOR WHATEVER YOU DO NOT GRAB FROM SALESFORCE OR PEOPLEHR
 
 
-function CurrentWeekBetslip(db){
+function Week2(db){
 
     const [bets, setBets] = useState([])
     
     useEffect(() => {
-        axios.get('http://localhost:3000/api/week4')
+        axios.get('http://localhost:3000/api/week2')
         .then(res => {
             // console.log(res)
             setBets(res.data)
@@ -27,8 +27,8 @@ function CurrentWeekBetslip(db){
     })
 
     return(  
-        <div class="card_container current-week-betslip-card_container">
-            <h2 class="this-weeks-bet-h2">This Weeks Bet</h2>
+        <div class="card_container weekly-betslip-card_container">
+            <h2 class="weekly-bet-h2">Bet Week 2</h2>
         <ul className = "current-week-betslip-employees-list">
             {   
                 bets.map(post => <li key={post.id}>
@@ -50,8 +50,12 @@ function CurrentWeekBetslip(db){
                         </div>
                         <div className = "oddsAndOutcomeBox">
                             <p className = "bet-card-text employee-card-text-odds">Odds:  <span className = "bet-text-data">{post.what_are_the_odds}</span></p>
-                            {/* <p className= "yetToPlayIndicator">YTP</p> */}
-                            {/* <p className = "bet-card-text"><span className = "bet-text-data">{post.outcome_of_bet_won}</span></p> */}
+                            <p className = "bet-card-won"><span className = "bet-text-data">{post.outcome_of_bet_won > 0 &&
+                            <p>Won</p> 
+                            }</span></p>
+                            <p className = "bet-card-lost"><span className = "bet-text-data">{post.outcome_of_bet_won < 1 &&
+                            <p>Lost</p>
+                            }</span></p>
                         </div>
                     </div>
             </div>
@@ -63,4 +67,4 @@ function CurrentWeekBetslip(db){
 
       )
 }
-export default CurrentWeekBetslip
+export default Week2

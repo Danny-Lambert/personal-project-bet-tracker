@@ -5,12 +5,12 @@
     display: flex;
     /* align-items: flex-end; */
     margin-left: 5%;
-
+    margin-bottom: 2%;
 }
 .full-page-main-page{
     /* background-color: #747272; */
     background-color: rgb(0, 0, 0);
-
+    height: 120%;
     /* margin-top: 50%; */
     font-family: 'Work Sans', sans-serif;}
 .table-of-leaderboard{

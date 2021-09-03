@@ -138,7 +138,7 @@ import axios from 'axios'
 
         };
             // NEED TO CHANGE THIS ENDPOINT
-        axios.post('http://localhost:3000/api/week1', userObject)
+        axios.post('http://localhost:3000/api/week4', userObject)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {
@@ -246,9 +246,9 @@ render() {
                     </div>
                     <div className="form-group">
                         <label className ="form-labels">Bet Outcome</label>
-                        <input type="number" step="1" value={this.state.outcome_of_bet_won} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetWon}  name="yetToPlay" placeholder="Yet to play"/>  
-                        <input type="number" step="1" value={this.state.outcome_of_bet_lost} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetLost}  name="Won" placeholder="Won"/>  
-                        <input type="number" step="1" value={this.state.outcome_of_bet_yettoplay} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetYettoplay}  name="Lost" placeholder="Lost"/>  
+                        <input type="number" step="1" value={this.state.outcome_of_bet_won} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetWon} name="Won" placeholder="Won" />  
+                        <input type="number" step="1" value={this.state.outcome_of_bet_lost} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetLost}  name="Lost" placeholder="Lost"/>  
+                        <input type="number" step="1" value={this.state.outcome_of_bet_yettoplay} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetYettoplay}  name="yetToPlay" placeholder="Yet to play"/>  
 
 {/* <input type="number" id="outcomeOfBet" value="2" name="Won" /> Won 
                         <input type="number" id="outcomeOfBet" value="3" name="Lost" /> Lost                          */}
