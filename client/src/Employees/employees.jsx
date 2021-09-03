@@ -5,7 +5,7 @@ import axios from 'axios'
 import Form from "../Form/form";
 import CurrentWeekBetslip from "../CurrentWeekBetslip/currentWeekBetslip";
 import Iframe from 'react-iframe';
-
+import r2rlogo from '../images/R2Rlogo.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../Employees/employees.styles.css'
 
@@ -61,47 +61,13 @@ function Employees(db){
 return(
     <div className= "full-page-main-page">
         <div className="form-and-table-container">
-            <Form />
+            <div class="col">
+                <img src ={r2rlogo} alt="r2rlogo" class="r2r-logo" />
+                <Form />
+            </div>
         <div className="container">
             <div class="row">
-            {/* <table class="table-of-leaderboard table table-dark table-striped table-dark shadow col-8">
-                        <thead>
-                        <tr className="tableRows">
-                            <th scope="col"></th>
-                            <th scope="col">Wins</th>
-                            <th scope="col">Losses</th>
-                            <th scope="col">Win %</th>
-                            <th scope="col">Average Odds</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr className="tableRows">
-                            <th scope="row">Danny</th>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                        <tr className="tableRows">
-                            <th scope="row">Jimmy</th>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>1</td>                     
-                        </tr>
-                        <tr className="tableRows">
-                            <th scope="row">Frank</th>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>1</td>                      
-                        </tr>
-                        </tbody>
-                    </table>
-                */}
-{/* <Iframe iframe = {iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-yabzy/embed/charts?id=0939b01d-2239-4be9-9248-1dabbf88dcb2&theme=light"}/>
-                </div> */}
-            <iframe class= "iframe-chart" src="https://charts.mongodb.com/charts-project-0-yabzy/embed/charts?id=0939b01d-2239-4be9-9248-1dabbf88dcb2&theme=light"/>            
+                <iframe class= "iframe-chart" src="https://charts.mongodb.com/charts-project-0-yabzy/embed/charts?id=0939b01d-2239-4be9-9248-1dabbf88dcb2&autoRefresh=10&theme=dark"/>            
             </div>        
             <div class="row">
             <CurrentWeekBetslip />

@@ -13,7 +13,6 @@ app.use(cors({credentials: true, origin: "*"}));
 
 //Need to hide these credentials of username and password 
 
-let URI = "mongodb+srv://danny:Danny12345@group-betting.n04jv.mongodb.net/bets?retryWrites=true&w=majority"
 
 
 MongoClient.connect(URI, {useUnifiedTopology: true, useNewUrlParser: true})

@@ -71,7 +71,7 @@ form{
     box-shadow: 0 0 10px lightgrey;
     display: flex;
     flex-direction: column;
-    background-color: #546E7A;
+    background-color: #21313C;
   }
 .employees-menu-heading {
     font-weight: bold;
@@ -87,6 +87,11 @@ form{
     font-size: 16px;
     color: white;
     font-weight: 400 ;
+}
+.radio-buttons-form-group{
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
 }
 /* h2 {
     display: block;

@@ -28,7 +28,13 @@ import axios from 'axios'
         this.onChangeWhatAreTheOdds = this.onChangeWhatAreTheOdds.bind(this)
         // this.onChangeUserSelenium = this.onChangeUserSelenium.bind(this)
 
-        this.onChangeOutcomeOfBet = this.onChangeOutcomeOfBet.bind(this)
+        this.onChangeOutcomeOfBetWon = this.onChangeOutcomeOfBetWon.bind(this)
+        // this.onChangeCypress = this.onChangeCypress.bind(this)
+
+        this.onChangeOutcomeOfBetLost = this.onChangeOutcomeOfBetLost.bind(this)
+        // this.onChangeCypress = this.onChangeCypress.bind(this)
+
+        this.onChangeOutcomeOfBetYettoplay = this.onChangeOutcomeOfBetYettoplay.bind(this)
         // this.onChangeCypress = this.onChangeCypress.bind(this)
 
 
@@ -43,9 +49,8 @@ import axios from 'axios'
             who_is_it:'',
             what_is_the_bet:'',
             other_info_needed:'',
-            what_are_the_odds:'',
+            what_are_the_odds: '',
             outcome_of_bet:'',
-
         }
         this.setState({ home_team: '', away_team: '', betting_weekend_selector:'', who_is_it:'', what_is_the_bet:'', other_info_needed:'', what_are_the_odds:'', outcome_of_bet:'' })
     }
@@ -72,10 +77,15 @@ import axios from 'axios'
     onChangeWhatAreTheOdds(e) {
         this.setState({ what_are_the_odds: e.target.valueAsNumber })
     }
-    onChangeOutcomeOfBet(e) {
-        this.setState({ outcome_of_bet: e.target.value })
+    onChangeOutcomeOfBetWon(e) {
+        this.setState({ outcome_of_bet_won: e.target.valueAsNumber  })
     }
-
+    onChangeOutcomeOfBetLost(e) {
+        this.setState({ outcome_of_bet_lost: e.target.valueAsNumber  })
+    }
+    onChangeOutcomeOfBetYettoplay(e) {
+        this.setState({ outcome_of_bet_yettoplay: e.target.valueAsNumber  })
+    }
 
     onSubmit(e) {
         // e.preventDefault()
@@ -88,7 +98,11 @@ import axios from 'axios'
             what_is_the_bet: this.state.what_is_the_bet,
             other_info_needed: this.state.other_info_needed,
             what_are_the_odds: this.state.what_are_the_odds,
-            outcome_of_bet: this.state.outcome_of_bet,
+            outcome_of_bet_won: this.state.outcome_of_bet_won,
+            outcome_of_bet_lost: this.state.outcome_of_bet_lost,
+            outcome_of_bet_yettoplay: this.state.outcome_of_bet_yettoplay,
+
+
         };
 
         axios.post('http://localhost:3000/api/bets', userObject)
@@ -118,7 +132,10 @@ import axios from 'axios'
             what_is_the_bet: this.state.what_is_the_bet,
             other_info_needed: this.state.other_info_needed,
             what_are_the_odds: this.state.what_are_the_odds,
-            outcome_of_bet: this.state.outcome_of_bet,
+            outcome_of_bet_won: this.state.outcome_of_bet_won,
+            outcome_of_bet_lost: this.state.outcome_of_bet_lost,
+            outcome_of_bet_yettoplay: this.state.outcome_of_bet_yettoplay,
+
         };
             // NEED TO CHANGE THIS ENDPOINT
         axios.post('http://localhost:3000/api/week1', userObject)
@@ -227,14 +244,20 @@ render() {
                         <label className ="form-labels oddsLabel">Odds</label>
                         <input type="number" step="1" value={this.state.what_are_the_odds} onChange={this.onChangeWhatAreTheOdds} className="form-answer-box" required />
                     </div>
-                    <div className="form-group ">
+                    <div className="form-group">
                         <label className ="form-labels">Bet Outcome</label>
-                        <select id="outcomeOfBet" value={this.state.outcome_of_bet} onChange={this.onChangeOutcomeOfBet} className="form-answer-box" required >
-                            
+                        <input type="number" step="1" value={this.state.outcome_of_bet_won} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetWon}  name="yetToPlay" placeholder="Yet to play"/>  
+                        <input type="number" step="1" value={this.state.outcome_of_bet_lost} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetLost}  name="Won" placeholder="Won"/>  
+                        <input type="number" step="1" value={this.state.outcome_of_bet_yettoplay} id="outcomeOfBet" onChange={this.onChangeOutcomeOfBetYettoplay}  name="Lost" placeholder="Lost"/>  
+
+{/* <input type="number" id="outcomeOfBet" value="2" name="Won" /> Won 
+                        <input type="number" id="outcomeOfBet" value="3" name="Lost" /> Lost                          */}
+                        
+                        {/* <select id="outcomeOfBet" value={this.state.outcome_of_bet} onChange={this.onChangeOutcomeOfBet} className="form-answer-box" required >                            
                             <option value="yetToPlay">Yet to play</option>
                             <option value="Won">Won</option>
-                            <option value="Lost">Lost</option>
-                        </select>
+                            <option value="Lost">Lost</option> */}
+                        {/* </select> */}
                     </div>
                     <div className="form-group-button">
                         <input type="submit" value="Add your bet" onClick="Alert()" className=" btn btn-primary btn-sm customButton"/>

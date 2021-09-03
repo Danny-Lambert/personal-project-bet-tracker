@@ -36,7 +36,7 @@ function CurrentWeekBetslip(db){
                     <div className ="single-bet-card current-week-betslip">
                         <div className="nameAndDateBox">   
                             <p className = "bet-card-text"><h3 className ="bet-text-h3">{post.who_is_it}</h3></p>
-                            <p className = "bet-card-text"><span className = "bet-text-data">{post.betting_weekend_selector}</span></p>
+                            {/* <p className = "bet-card-text"><span className = "bet-text-data">{post.betting_weekend_selector}</span></p> */}
                         </div> 
                         <div className = "fixtureAlign">
                             <p className = "bet-card-text"><span className = "bet-text-data"> {post.home_team}</span></p>
@@ -45,12 +45,12 @@ function CurrentWeekBetslip(db){
                         </div>
                         <div className = "otherInfoAndBetBox">
                             <p className = "bet-card-text"><span className = "bet-text-data">{post.what_is_the_bet}</span></p>
-                            <p className ="otherInfoAndBe   tBoxPeeTag">-</p>
-                            <p className = "bet-card-text"><span className = "bet-text-data">{post.other_info_needed}</span></p>
+                            {/* <p className ="otherInfoAndBe   tBoxPeeTag">-</p>
+                            <p className = "bet-card-text"><span className = "bet-text-data">{post.other_info_needed}</span></p> */}
                         </div>
                         <div className = "oddsAndOutcomeBox">
                             <p className = "bet-card-text employee-card-text-odds">Odds:  <span className = "bet-text-data">{post.what_are_the_odds}</span></p>
-                            <p className = "bet-card-text"><span className = "bet-text-data">{post.outcome_of_bet}</span></p>
+                            <p className = "bet-card-text"><span className = "bet-text-data">{post.outcome_of_bet_won}</span></p>
                         </div>
                     </div>
             </div>
