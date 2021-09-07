@@ -1,6 +1,8 @@
 {
+  
   "dependencies": {
-    "@mongodb-js/charts-embed-dom": "^2.1.0",
+    "homepage" : "https://{Danny-Lambert}.github.io/{personal-project-bet-tracker}",
+    " mongodb-js/charts-embed-dom": "^2.1.0",
     "ajax": "^0.0.4",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
