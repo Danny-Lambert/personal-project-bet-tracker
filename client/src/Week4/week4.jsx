@@ -2,7 +2,7 @@ import React, {useState, useEffect, Component} from 'react'
 // import '../employees/employees.styles.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../Week1/week1.css'
+import '../Week4/week4.css'
 
 
 // THIS SECTION CAN BE DELETED ONCE PEOPLEHR FULLY INTEGRATED 
@@ -10,12 +10,12 @@ import '../Week1/week1.css'
 // CAN USE AS EXAMPLE CALLS TO MONGODB FOR WHATEVER YOU DO NOT GRAB FROM SALESFORCE OR PEOPLEHR
 
 
-function Week1(db){
+function Week4(db){
 
     const [bets, setBets] = useState([])
     
     useEffect(() => {
-        axios.get('http://localhost:3000/api/week1')
+        axios.get('http://localhost:3000/api/week4')
         .then(res => {
             // console.log(res)
             setBets(res.data)
@@ -24,17 +24,12 @@ function Week1(db){
         .catch(err => {
             console.log(err)
         })
+
     })
-    console.log(bets.outcome_of_bet_won)
-    
-    // renderElement(){
-    //     if(this.outcome_of_bet_won.value == 1 )
-    //        return <p>Won</p>;
-    //     return <p>Lost</p>;
-    //  }}
+
     return(  
         <div class="card_container weekly-betslip-card_container">
-            <h2 class="weekly-bet-h2">Bet Week 1 - <span className="weekly-h2-lost">Lost</span>  3/6 (10.91) </h2>
+            <h2 class="weekly-bet-h2">Bet Week 4 -<span className="weekly-h2-lost">Lost</span>  4/6   (Odds - 12.2) </h2>
         <ul className = "current-week-betslip-employees-list">
             {   
                 bets.map(post => <li key={post.id}>
@@ -73,4 +68,4 @@ function Week1(db){
 
       )
 }
-export default Week1
+export default Week4

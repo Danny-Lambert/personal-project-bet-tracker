@@ -29,7 +29,7 @@ function Week2(db){
 
     return(  
         <div class="card_container weekly-betslip-card_container">
-            <h2 class="weekly-bet-h2">Bet Week 3</h2>
+            <h2 class="weekly-bet-h2">Bet Week 3 - <span className="weekly-h2-lost">Lost</span>  3/6 (16.11) </h2>
         <ul className = "current-week-betslip-employees-list">
             {   
                 bets.map(post => <li key={post.id}>

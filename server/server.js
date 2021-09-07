@@ -12,7 +12,10 @@ app.use(express.json());
 app.use(cors({credentials: true, origin: "*"}));
 
 //Need to hide these credentials of username and password 
+const USERNAME = process.env.USERNAME
+const PASSWORD = process.env.PASSWORD
 
+let URI = "mongodb+srv://{USERNAME}:{PASSWORD}@group-betting.n04jv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 MongoClient.connect(URI, {useUnifiedTopology: true, useNewUrlParser: true})
 // MongoClient.connect('mongodb://localhost:27017')
