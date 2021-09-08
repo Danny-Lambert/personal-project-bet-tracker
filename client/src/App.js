@@ -11,28 +11,28 @@ class App extends Component {
   }
     render(){
       return(
-         <Router>
-         <main>
-             <Switch >
-                          
-        //         <Route path="/employees" render={() => (
-                  <Employees />,
-                  document.getElementById('home-page')
-                  
-                 )} />
-/*                 
-                {/* <Route path="/" render={() => (
-                  <PageNotFound />
-                )} />  */}
+        <Router>
+        <main>
+            <Switch >
+                        
+                <Route path="/employees" render={() => (
+                <Employees />,
+                document.getElementById('home-page')
                 
-             </Switch>
-             </main>
-         </Router>
+                )} />
+              
+              {/* <Route path="/" render={() => (
+                <PageNotFound />
+              )} />  */}
+              
+            </Switch>
+            </main>
+        </Router>
     
-       )
-     }
-
+      )
     }
+
+  }
 
 
 export default App;
