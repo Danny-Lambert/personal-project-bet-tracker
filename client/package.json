@@ -1,5 +1,6 @@
 {
-  "name": "workforce_planning_app",
+  "name": "betting-app",
+  "homepage": "https://danny-lambert.github.io/personal-project-bet-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
