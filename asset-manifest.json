@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.b94d85b0.chunk.css",
-    "main.js": "/static/js/main.ab546c1d.chunk.js",
-    "main.js.map": "/static/js/main.ab546c1d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.aa98b5a2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.aa98b5a2.js.map",
-    "static/css/2.f84022c0.chunk.css": "/static/css/2.f84022c0.chunk.css",
-    "static/js/2.004005c2.chunk.js": "/static/js/2.004005c2.chunk.js",
-    "static/js/2.004005c2.chunk.js.map": "/static/js/2.004005c2.chunk.js.map",
-    "static/js/3.7cf1bfe4.chunk.js": "/static/js/3.7cf1bfe4.chunk.js",
-    "static/js/3.7cf1bfe4.chunk.js.map": "/static/js/3.7cf1bfe4.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.f84022c0.chunk.css.map": "/static/css/2.f84022c0.chunk.css.map",
-    "static/css/main.b94d85b0.chunk.css.map": "/static/css/main.b94d85b0.chunk.css.map",
-    "static/js/2.004005c2.chunk.js.LICENSE.txt": "/static/js/2.004005c2.chunk.js.LICENSE.txt",
-    "static/media/R2Rlogo.783154db.jpg": "/static/media/R2Rlogo.783154db.jpg"
+    "main.css": "/personal-project-bet-tracker/static/css/main.b94d85b0.chunk.css",
+    "main.js": "/personal-project-bet-tracker/static/js/main.b0bc137a.chunk.js",
+    "main.js.map": "/personal-project-bet-tracker/static/js/main.b0bc137a.chunk.js.map",
+    "runtime-main.js": "/personal-project-bet-tracker/static/js/runtime-main.9f67eb8e.js",
+    "runtime-main.js.map": "/personal-project-bet-tracker/static/js/runtime-main.9f67eb8e.js.map",
+    "static/css/2.f84022c0.chunk.css": "/personal-project-bet-tracker/static/css/2.f84022c0.chunk.css",
+    "static/js/2.991e46f4.chunk.js": "/personal-project-bet-tracker/static/js/2.991e46f4.chunk.js",
+    "static/js/2.991e46f4.chunk.js.map": "/personal-project-bet-tracker/static/js/2.991e46f4.chunk.js.map",
+    "static/js/3.b13430ef.chunk.js": "/personal-project-bet-tracker/static/js/3.b13430ef.chunk.js",
+    "static/js/3.b13430ef.chunk.js.map": "/personal-project-bet-tracker/static/js/3.b13430ef.chunk.js.map",
+    "index.html": "/personal-project-bet-tracker/index.html",
+    "static/css/2.f84022c0.chunk.css.map": "/personal-project-bet-tracker/static/css/2.f84022c0.chunk.css.map",
+    "static/css/main.b94d85b0.chunk.css.map": "/personal-project-bet-tracker/static/css/main.b94d85b0.chunk.css.map",
+    "static/js/2.991e46f4.chunk.js.LICENSE.txt": "/personal-project-bet-tracker/static/js/2.991e46f4.chunk.js.LICENSE.txt",
+    "static/media/R2Rlogo.783154db.jpg": "/personal-project-bet-tracker/static/media/R2Rlogo.783154db.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.aa98b5a2.js",
+    "static/js/runtime-main.9f67eb8e.js",
     "static/css/2.f84022c0.chunk.css",
-    "static/js/2.004005c2.chunk.js",
+    "static/js/2.991e46f4.chunk.js",
     "static/css/main.b94d85b0.chunk.css",
-    "static/js/main.ab546c1d.chunk.js"
+    "static/js/main.b0bc137a.chunk.js"
   ]
 }
